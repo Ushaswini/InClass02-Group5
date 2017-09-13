@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">InClass02Beacons</string>
+    <item name="tvProductName" type="id" />
+    <item name="tvRegion" type="id" />
+    <item name="tvPrice" type="id" />
+    <item name="tvDiscount" type="id" />
+</resources>
