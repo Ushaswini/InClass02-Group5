@@ -47,17 +47,16 @@ public class MyApplication extends Application {
             @Override
             public void onExitedRegion(BeaconRegion region) {
                 // could add an "exit" notification too if you want (-:
+                if(region.getIdentifier() == "discount beacons"){
+                    
+                }
             }
         });
         beaconManager.connect(new BeaconManager.ServiceReadyCallback() {
             @Override
             public void onServiceReady() {
                 beaconManager.startMonitoring(new BeaconRegion(
-                        "monitored region grocery",UUID.fromString("B9407F30-F5F8-466E-AFF9-25556B57FE6D"), 15212, 31506));
-                beaconManager.startMonitoring(new BeaconRegion(
-                        "monitored region lifestyle",UUID.fromString("B9407F30-F5F8-466E-AFF9-25556B57FE6D"), 48071, 25324));
-                beaconManager.startMonitoring(new BeaconRegion(
-                        "monitored region produce",UUID.fromString("B9407F30-F5F8-466E-AFF9-25556B57FE6D"), 26535, 44799));
+                        "discount beacons",UUID.fromString("B9407F30-F5F8-466E-AFF9-25556B57FE6D"), null, null));
             }
         });
     }
